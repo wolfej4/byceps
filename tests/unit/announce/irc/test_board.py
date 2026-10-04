@@ -54,7 +54,7 @@ def test_announce_topic_created(
 ):
     expected_link = f'http://example.com/board/topics/{TOPIC_ID}'
     expected_text = (
-        'TheShadow999 has created topic "Brötchen zum Frühstück" '
+        'TheShadow999 has created topic "Bread rolls for breakfast" '
         f'in "ACME Entertainment Convention" board: {expected_link}'
     )
 
@@ -65,7 +65,7 @@ def test_announce_topic_created(
         board_id=BOARD_ID,
         topic_id=TOPIC_ID,
         topic_creator=author,
-        topic_title='Brötchen zum Frühstück',
+        topic_title='Bread rolls for breakfast',
         url=expected_link,
     )
 
@@ -84,7 +84,7 @@ def test_announce_topic_hidden(
 ):
     expected_link = f'http://example.com/board/topics/{TOPIC_ID}'
     expected_text = (
-        'TheModerator has hidden topic "Brötchen zum Frühstück" '
+        'TheModerator has hidden topic "Bread rolls for breakfast" '
         'by TheShadow999 '
         f'in "ACME Entertainment Convention" board: {expected_link}'
     )
@@ -96,7 +96,7 @@ def test_announce_topic_hidden(
         board_id=BOARD_ID,
         topic_id=TOPIC_ID,
         topic_creator=author,
-        topic_title='Brötchen zum Frühstück',
+        topic_title='Bread rolls for breakfast',
         moderator=moderator,
         url=expected_link,
     )
@@ -116,7 +116,7 @@ def test_announce_topic_unhidden(
 ):
     expected_link = f'http://example.com/board/topics/{TOPIC_ID}'
     expected_text = (
-        'TheModerator has unhidden topic "Brötchen zum Frühstück" '
+        'TheModerator has unhidden topic "Bread rolls for breakfast" '
         'by TheShadow999 '
         f'in "ACME Entertainment Convention" board: {expected_link}'
     )
@@ -128,7 +128,7 @@ def test_announce_topic_unhidden(
         board_id=BOARD_ID,
         topic_id=TOPIC_ID,
         topic_creator=author,
-        topic_title='Brötchen zum Frühstück',
+        topic_title='Bread rolls for breakfast',
         moderator=moderator,
         url=expected_link,
     )
@@ -148,7 +148,7 @@ def test_announce_topic_locked(
 ):
     expected_link = f'http://example.com/board/topics/{TOPIC_ID}'
     expected_text = (
-        'TheModerator has closed topic "Brötchen zum Frühstück" '
+        'TheModerator has closed topic "Bread rolls for breakfast" '
         'by TheShadow999 '
         f'in "ACME Entertainment Convention" board: {expected_link}'
     )
@@ -160,7 +160,7 @@ def test_announce_topic_locked(
         board_id=BOARD_ID,
         topic_id=TOPIC_ID,
         topic_creator=author,
-        topic_title='Brötchen zum Frühstück',
+        topic_title='Bread rolls for breakfast',
         moderator=moderator,
         url=expected_link,
     )
@@ -180,7 +180,7 @@ def test_announce_topic_unlocked(
 ):
     expected_link = f'http://example.com/board/topics/{TOPIC_ID}'
     expected_text = (
-        'TheModerator has reopened topic "Brötchen zum Frühstück" '
+        'TheModerator has reopened topic "Bread rolls for breakfast" '
         'by TheShadow999 '
         f'in "ACME Entertainment Convention" board: {expected_link}'
     )
@@ -192,7 +192,7 @@ def test_announce_topic_unlocked(
         board_id=BOARD_ID,
         topic_id=TOPIC_ID,
         topic_creator=author,
-        topic_title='Brötchen zum Frühstück',
+        topic_title='Bread rolls for breakfast',
         moderator=moderator,
         url=expected_link,
     )
@@ -212,7 +212,7 @@ def test_announce_topic_pinned(
 ):
     expected_link = f'http://example.com/board/topics/{TOPIC_ID}'
     expected_text = (
-        'TheModerator has pinned topic "Brötchen zum Frühstück" '
+        'TheModerator has pinned topic "Bread rolls for breakfast" '
         'by TheShadow999 '
         f'in "ACME Entertainment Convention" board: {expected_link}'
     )
@@ -224,7 +224,7 @@ def test_announce_topic_pinned(
         board_id=BOARD_ID,
         topic_id=TOPIC_ID,
         topic_creator=author,
-        topic_title='Brötchen zum Frühstück',
+        topic_title='Bread rolls for breakfast',
         moderator=moderator,
         url=expected_link,
     )
@@ -244,7 +244,7 @@ def test_announce_topic_unpinned(
 ):
     expected_link = f'http://example.com/board/topics/{TOPIC_ID}'
     expected_text = (
-        'TheModerator has unpinned topic "Brötchen zum Frühstück" '
+        'TheModerator has unpinned topic "Bread rolls for breakfast" '
         'by TheShadow999 '
         f'in "ACME Entertainment Convention" board: {expected_link}'
     )
@@ -256,7 +256,7 @@ def test_announce_topic_unpinned(
         board_id=BOARD_ID,
         topic_id=TOPIC_ID,
         topic_creator=author,
-        topic_title='Brötchen zum Frühstück',
+        topic_title='Bread rolls for breakfast',
         moderator=moderator,
         url=expected_link,
     )
@@ -276,7 +276,7 @@ def test_announce_topic_moved(
 ):
     expected_link = f'http://example.com/board/topics/{TOPIC_ID}'
     expected_text = (
-        'TheModerator has moved topic "Brötchen zum Frühstück" '
+        'TheModerator has moved topic "Bread rolls for breakfast" '
         'by TheShadow999 '
         'from "Category 1" to "Category 2" '
         f'in "ACME Entertainment Convention" board: {expected_link}'
@@ -289,7 +289,7 @@ def test_announce_topic_moved(
         board_id=BOARD_ID,
         topic_id=TOPIC_ID,
         topic_creator=author,
-        topic_title='Brötchen zum Frühstück',
+        topic_title='Bread rolls for breakfast',
         old_category_id=CATEGORY_1_ID,
         old_category_title=CATEGORY_1_TITLE,
         new_category_id=CATEGORY_2_ID,
@@ -312,7 +312,7 @@ def test_announce_posting_created(
 ):
     expected_link = f'http://example.com/board/postings/{POSTING_ID}'
     expected_text = (
-        'TheShadow999 replied in topic "Brötchen zum Frühstück" '
+        'TheShadow999 replied in topic "Bread rolls for breakfast" '
         f'in "ACME Entertainment Convention" board: {expected_link}'
     )
 
@@ -324,7 +324,7 @@ def test_announce_posting_created(
         posting_id=POSTING_ID,
         posting_creator=author,
         topic_id=TOPIC_ID,
-        topic_title='Brötchen zum Frühstück',
+        topic_title='Bread rolls for breakfast',
         topic_muted=False,
         url=expected_link,
     )
@@ -351,7 +351,7 @@ def test_announce_posting_created_on_muted_topic(
         posting_id=POSTING_ID,
         posting_creator=author,
         topic_id=TOPIC_ID,
-        topic_title='Brötchen zum Frühstück',
+        topic_title='Bread rolls for breakfast',
         topic_muted=True,
         url=link,
     )
@@ -372,7 +372,7 @@ def test_announce_posting_hidden(
     expected_link = f'http://example.com/board/postings/{POSTING_ID}'
     expected_text = (
         'TheModerator has hidden a reply by TheShadow999 in topic '
-        '"Brötchen zum Frühstück" '
+        '"Bread rolls for breakfast" '
         f'in "ACME Entertainment Convention" board: {expected_link}'
     )
 
@@ -384,7 +384,7 @@ def test_announce_posting_hidden(
         posting_id=POSTING_ID,
         posting_creator=author,
         topic_id=TOPIC_ID,
-        topic_title='Brötchen zum Frühstück',
+        topic_title='Bread rolls for breakfast',
         moderator=moderator,
         url=expected_link,
     )
@@ -405,7 +405,7 @@ def test_announce_posting_unhidden(
     expected_link = f'http://example.com/board/postings/{POSTING_ID}'
     expected_text = (
         'TheModerator has unhidden a reply by TheShadow999 in topic '
-        '"Brötchen zum Frühstück" '
+        '"Bread rolls for breakfast" '
         f'in "ACME Entertainment Convention" board: {expected_link}'
     )
 
@@ -417,7 +417,7 @@ def test_announce_posting_unhidden(
         posting_id=POSTING_ID,
         posting_creator=author,
         topic_id=TOPIC_ID,
-        topic_title='Brötchen zum Frühstück',
+        topic_title='Bread rolls for breakfast',
         moderator=moderator,
         url=expected_link,
     )

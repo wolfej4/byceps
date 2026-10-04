@@ -24,7 +24,7 @@ function init_seat_tooltips() {
           if (occupierName !== undefined) {
             tooltipHTML += '<div class="seat-occupier">'
                          + '<div class="seat-occupier-avatar"><div class="avatar size-48"><img src="' + dataset.occupierAvatar + '"></div></div>'
-                         + '<div class="seat-occupier-name"><span class="dimmed">reserviert von</span><br><strong>' + escape_html(occupierName) + '</strong></div>'
+                         + '<div class="seat-occupier-name"><span class="dimmed">reserved by</span><br><strong>' + escape_html(occupierName) + '</strong></div>'
                          + '</div>';
           }
         }
@@ -160,7 +160,7 @@ function wire_seat_release_button() {
   if (release_seat_trigger !== null) {
     release_seat_trigger.addEventListener('click', () => {
       const seat_label = get_selected_seat_label();
-      const confirmation_label = seat_label + ' (belegt durch Ticket ' + get_selected_ticket_code() + ') freigeben?';
+      const confirmation_label = 'Release ' + seat_label + ' (occupied by ticket ' + get_selected_ticket_code() + ')?';
       if (confirm(confirmation_label)) {
         const ticket_id = get_selected_ticket_id();
 
@@ -248,7 +248,7 @@ function init_occupiable_seats() {
     .forEach(seat => {
       seat.addEventListener('click', () => {
         const seat_label = seat.parentNode.dataset.label;
-        const confirmation_label = seat_label + ' mit Ticket ' + get_selected_ticket_code() + ' reservieren?';
+        const confirmation_label = 'Reserve ' + seat_label + ' with ticket ' + get_selected_ticket_code() + '?';
         if (confirm(confirmation_label)) {
           const seat_id = seat.parentNode.dataset.seatId;
           const ticket_id = get_selected_ticket_id();

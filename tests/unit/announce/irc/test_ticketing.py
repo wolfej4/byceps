@@ -35,7 +35,7 @@ def test_ticket_checked_in(
     make_user,
     webhook_for_irc,
 ):
-    expected_text = 'Admin has checked in ticket "GTFIN", used by Teilnehmer.'
+    expected_text = 'Admin has checked in ticket "GTFIN", used by Participant.'
 
     event = TicketCheckedInEvent(
         occurred_at=now,
@@ -43,7 +43,7 @@ def test_ticket_checked_in(
         ticket_id=TicketID(generate_uuid()),
         ticket_code=TicketCode('GTFIN'),
         occupied_seat_id=None,
-        user=make_user(screen_name='Teilnehmer'),
+        user=make_user(screen_name='Participant'),
     )
 
     actual = build_announcement_request(event, webhook_for_irc)
@@ -140,7 +140,7 @@ def test_multiple_tickets_sold(
     webhook_for_irc,
 ):
     expected_text = (
-        'TreuerKäufer has paid for 3 tickets. '
+        'LoyalBuyer has paid for 3 tickets. '
         'Currently 775 of 1001 tickets have been sold.'
     )
 
@@ -155,7 +155,7 @@ def test_multiple_tickets_sold(
         occurred_at=now,
         initiator=admin_user,
         party=event_party,
-        owner=make_user(screen_name='TreuerKäufer'),
+        owner=make_user(screen_name='LoyalBuyer'),
         quantity=3,
     )
 

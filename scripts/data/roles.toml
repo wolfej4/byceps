@@ -1,13 +1,13 @@
 [[roles]]
 id = 'api_admin'
-title = 'API verwalten'
+title = 'Manage API'
 assigned_permissions = [
     'api.administrate',
 ]
 
 [[roles]]
 id = 'authorization_admin'
-title = 'Rechte und Rollen verwalten'
+title = 'Manage permissions and roles'
 assigned_permissions = [
     'role.assign',
     'role.view',
@@ -15,7 +15,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'board_admin'
-title = 'Forum verwalten'
+title = 'Manage board'
 assigned_permissions = [
     'board.create',
     'board_category.create',
@@ -26,7 +26,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'board_moderator'
-title = 'Forum moderieren'
+title = 'Moderate board'
 assigned_permissions = [
     'board.announce',
     'board.hide',
@@ -39,7 +39,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'board_user'
-title = 'im Forum schreiben'
+title = 'Post in board'
 assigned_permissions = [
     'board_posting.create',
     'board_posting.update',
@@ -49,7 +49,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'brand_admin'
-title = 'Marken verwalten'
+title = 'Manage brands'
 assigned_permissions = [
     'brand.create',
     'brand.update',
@@ -58,7 +58,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'checkin_boss'
-title = 'Abendkasse und Nutzerzuweisung'
+title = 'Box office and user assignment'
 assigned_permissions = [
     'shop_order.view',
     'ticketing.administrate_seat_occupancy',
@@ -70,12 +70,12 @@ assigned_permissions = [
 
 [[roles]]
 id = 'consent_admin'
-title = 'Zustimmungen verwalten'
+title = 'Manage consents'
 assigned_permissions = ['consent.administrate']
 
 [[roles]]
 id = 'content_admin'
-title = 'Inhalte verwalten'
+title = 'Manage content'
 assigned_permissions = [
     'page.delete',
     'snippet.delete',
@@ -84,7 +84,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'content_editor'
-title = 'Inhalte bearbeiten'
+title = 'Edit content'
 assigned_permissions = [
     'page.create',
     'page.update',
@@ -99,7 +99,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'gallery_admin'
-title = 'Galerien verwalten'
+title = 'Manage galleries'
 assigned_permissions = [
     'gallery.administrate',
     'gallery.view_hidden',
@@ -107,7 +107,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'guest_server_admin'
-title = 'Gastserver verwalten'
+title = 'Manage guest servers'
 assigned_permissions = [
     'guest_server.administrate',
     'guest_server.view',
@@ -115,22 +115,22 @@ assigned_permissions = [
 
 [[roles]]
 id = 'jobs_admin'
-title = 'Hintergrundjobs verwalten'
+title = 'Manage background jobs'
 assigned_permissions = ['jobs.view']
 
 [[roles]]
 id = 'maintenance_admin'
-title = 'Wartungsarbeiten ausführen'
+title = 'Perform maintenance'
 assigned_permissions = ['admin.maintain']
 
 [[roles]]
 id = 'news_admin'
-title = 'News verwalten'
+title = 'Manage news'
 assigned_permissions = ['news_channel.administrate']
 
 [[roles]]
 id = 'news_editor'
-title = 'Newsredakteur'
+title = 'News editor'
 assigned_permissions = [
     'news_item.create',
     'news_item.publish',
@@ -141,7 +141,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'newsletter_admin'
-title = 'Newsletter-Abonnements verwalten'
+title = 'Manage newsletter subscriptions'
 assigned_permissions = [
     'newsletter.administrate',
     'newsletter.export_subscribers',
@@ -150,7 +150,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'orga'
-title = 'Organisator'
+title = 'Organizer'
 assigned_permissions = [
     'admin.access',
     'board.view_hidden',
@@ -177,7 +177,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'orga_team_admin'
-title = 'Orgateams verwalten'
+title = 'Manage orga teams'
 assigned_permissions = [
     'orga_team.administrate_memberships',
     'orga_team.create',
@@ -187,14 +187,14 @@ assigned_permissions = [
 
 [[roles]]
 id = 'page_admin'
-title = 'Seiten verwalten'
+title = 'Manage pages'
 assigned_permissions = [
     'page.delete',
 ]
 
 [[roles]]
 id = 'page_editor'
-title = 'Seiten bearbeiten'
+title = 'Edit pages'
 assigned_permissions = [
     'page.create',
     'page.update',
@@ -204,7 +204,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'party_admin'
-title = 'Partys verwalten'
+title = 'Manage parties'
 assigned_permissions = [
     'party.create',
     'party.update',
@@ -213,7 +213,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'seating_admin'
-title = 'Sitzpläne verwalten'
+title = 'Manage seating plans'
 assigned_permissions = [
     'seating.administrate',
     'seating.view',
@@ -221,7 +221,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'shop_admin'
-title = 'Shops verwalten'
+title = 'Manage shops'
 assigned_permissions = [
     'shop.create',
     'shop.update',
@@ -230,7 +230,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'shop_product_admin'
-title = 'Shop-Produkte verwalten'
+title = 'Manage shop products'
 assigned_permissions = [
     'shop_product.administrate',
     'shop_product.view',
@@ -238,7 +238,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'shop_order_admin'
-title = 'Shop-Bestellungen verwalten'
+title = 'Manage shop orders'
 assigned_permissions = [
     'shop_order.cancel',
     'shop_order.update',
@@ -247,7 +247,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'shop_order_payment_approver'
-title = 'Zahlungseingänge bestätigen'
+title = 'Confirm incoming payments'
 assigned_permissions = [
     'shop_order.mark_as_paid',
     'shop_order.view',
@@ -255,7 +255,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'site_admin'
-title = 'Sites verwalten'
+title = 'Manage sites'
 assigned_permissions = [
     'site.create',
     'site.update',
@@ -265,14 +265,14 @@ assigned_permissions = [
 
 [[roles]]
 id = 'snippet_admin'
-title = 'Snippets verwalten'
+title = 'Manage snippets'
 assigned_permissions = [
     'snippet.delete',
 ]
 
 [[roles]]
 id = 'snippet_editor'
-title = 'Snippets bearbeiten'
+title = 'Edit snippets'
 assigned_permissions = [
     'snippet.create',
     'snippet.update',
@@ -282,7 +282,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'support_orga'
-title = 'Support-Orga'
+title = 'Support orga'
 assigned_permissions = [
     'shop_order.view',
     'user.view',
@@ -290,7 +290,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'ticketing_admin'
-title = 'Tickets verwalten'
+title = 'Manage tickets'
 assigned_permissions = [
     'ticketing.administrate',
     'ticketing.view',
@@ -298,7 +298,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'tourney_admin'
-title = 'Turniere verwalten'
+title = 'Manage tourneys'
 assigned_permissions = [
     'tourney.administrate',
     'tourney.view',
@@ -306,7 +306,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'tourney_category_admin'
-title = 'Turnierkategorien verwalten'
+title = 'Manage tourney categories'
 assigned_permissions = [
     'tourney_category.administrate',
     'tourney_category.view',
@@ -314,7 +314,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'user_admin'
-title = 'Benutzer verwalten'
+title = 'Manage users'
 assigned_permissions = [
     'user.administrate',
     'user.create',
@@ -323,7 +323,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'user_authn_admin'
-title = 'Benutzer-Authentifizierung verwalten'
+title = 'Manage user authentication'
 assigned_permissions = [
     'authn_identity_tag.administrate',
     'authn_identity_tag.view',
@@ -332,7 +332,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'user_badge_admin'
-title = 'Abzeichen verwalten'
+title = 'Manage badges'
 assigned_permissions = [
     'user_badge.award',
     'user_badge.create',
@@ -342,7 +342,7 @@ assigned_permissions = [
 
 [[roles]]
 id = 'webhook_admin'
-title = 'Webhooks verwalten'
+title = 'Manage webhooks'
 assigned_permissions = [
     'webhook.administrate',
     'webhook.view',

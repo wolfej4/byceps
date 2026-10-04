@@ -217,7 +217,7 @@ onDomReady(() => {
   document.querySelectorAll('a[data-action="log-out"]')
     .forEach(anchor => {
       anchor.addEventListener('click', event => {
-        if (confirm('Wirklich abmelden?')) {
+        if (confirm('Really log out?')) {
           const href = anchor.getAttribute('href');
           fetch(href, {method: 'POST'})
             .then(response => location.href = anchor.dataset.redirectTarget);

@@ -104,8 +104,8 @@ def test_get_comments_for_match_with_edited_comment(
                     'avatar_url': '/static/user_avatar_fallback.svg',
                     'is_orga': False,
                 },
-                'body_text': '[b]So nicht[/b], Freundchen!',
-                'body_html': '<strong>So nicht</strong>, Freundchen!',
+                'body_text': '[b]Not like that[/b], buddy!',
+                'body_html': '<strong>Not like that</strong>, buddy!',
                 'last_edited_at': edited_comment.last_edited_at.isoformat(),
                 'last_editor': {
                     'user_id': str(edited_comment.last_edited_by.id),
@@ -141,6 +141,6 @@ def comment(database, match, user):
 @pytest.fixture()
 def edited_comment(database, comment, admin_user):
     tourney_match_comment_service.update_comment(
-        comment.id, admin_user, '[b]So nicht[/b], Freundchen!'
+        comment.id, admin_user, '[b]Not like that[/b], buddy!'
     )
     return tourney_match_comment_service.get_comment(comment.id)
