@@ -133,7 +133,7 @@ def test_cancel_before_paid(
 
     url = f'{BASE_URL}/shop/orders/{db_order_before.id}/cancel'
     form_data = {
-        'reason': 'Dein Vorname ist albern!',
+        'reason': 'Your first name is silly!',
         'send_email': 'y',
     }
     response = shop_order_admin_client.post(url, data=form_data)
@@ -188,7 +188,7 @@ def test_cancel_before_paid_without_sending_email(
 
     url = f'{BASE_URL}/shop/orders/{placed_order.id}/cancel'
     form_data = {
-        'reason': 'Dein Vorname ist albern!',
+        'reason': 'Your first name is silly!',
         # Sending e-mail is not requested.
     }
     response = shop_order_admin_client.post(url, data=form_data)
@@ -296,7 +296,7 @@ def test_cancel_after_paid(
 
     url = f'{BASE_URL}/shop/orders/{db_order_before.id}/cancel'
     form_data = {
-        'reason': 'Dein Vorname ist albern!',
+        'reason': 'Your first name is silly!',
         'send_email': 'n',
     }
     response = shop_order_admin_client.post(url, data=form_data)

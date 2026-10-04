@@ -39,7 +39,7 @@ def create_category(
         title = generate_token()
 
     if description is None:
-        description = f'Hier geht es um Kategorie {number}'
+        description = f'This is about category {number}'
 
     return board_category_command_service.create_category(
         board_id, slug, title, description
@@ -55,10 +55,10 @@ def create_topic(
     body: str | None = None,
 ) -> Topic:
     if title is None:
-        title = f'Thema {number}'
+        title = f'Topic {number}'
 
     if body is None:
-        body = f'Inhalt von Thema {number}'
+        body = f'Content of topic {number}'
 
     topic, _ = board_topic_command_service.create_topic(
         category_id, creator, title, body
@@ -75,7 +75,7 @@ def create_posting(
     body: str | None = None,
 ) -> DbPosting:
     if body is None:
-        body = f'Inhalt von Beitrag {number}.'
+        body = f'Content of posting {number}.'
 
     posting, _ = board_posting_command_service.create_posting(
         topic_id, creator, body

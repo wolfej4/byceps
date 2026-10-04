@@ -69,19 +69,19 @@ td {
 
       <img src="data:image/svg+xml,{{ barcode_svg_inline|safe }}">
 
-      <h2>Nutzer/in</h2>
+      <h2>{{ pgettext('ticket', 'User') }}</h2>
       <table>
         <tr>
           <th>Nickname:</th>
-          <td>{{ render_user_screen_name(ticket_user) if ticket_user else 'nicht zugewiesen'|dim }}</td>
+          <td>{{ render_user_screen_name(ticket_user) if ticket_user else _('unassigned')|dim }}</td>
         </tr>
         <tr>
           <th>Name:</th>
-          <td>{{ ticket_user.detail.full_name if ticket_user else 'nicht zugewiesen'|dim }}</td>
+          <td>{{ ticket_user.detail.full_name if ticket_user else _('unassigned')|dim }}</td>
         </tr>
       </table>
 
-      <h2>Käufer/in</h2>
+      <h2>{{ _('Buyer') }}</h2>
       <table>
         <tr>
           <th>Nickname:</th>
@@ -93,11 +93,11 @@ td {
         </tr>
       </table>
 
-      <h2>Kategorie</h2>
+      <h2>{{ _('Category') }}</h2>
       <div>{{ ticket_category_title }}</div>
 
-      <h2>Sitzplatz</h2>
-      <div>{{ occupied_seat.label|fallback('unbenannt') if occupied_seat else 'nicht zugewiesen'|dim }}</div>
+      <h2>{{ ngettext('Seat', 'Seats', 1) }}</h2>
+      <div>{{ occupied_seat.label|fallback(_('unnamed')) if occupied_seat else _('unassigned')|dim }}</div>
 
     </div>
 
